@@ -19,7 +19,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'template.html'
+      template: 'template.html',
+      templateParameters: {
+        'foo': 'bar',
+          'foo2': 'bar2',
+      },
     }),
     new MiniCssExtractPlugin({ filename: 'styles.css' })
   ]

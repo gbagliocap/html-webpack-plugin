@@ -5,5 +5,11 @@
     <title><%= foo %></title>
   </head>
   <body>
+    <pre>
+        Foo: <%= foo %>
+        Foo2: <%= foo2 %>
+    </pre>
+
+    <%= require('html-loader!./partial.html') %>
   </body>
 </html>

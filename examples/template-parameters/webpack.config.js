@@ -14,7 +14,8 @@ module.exports = {
       // If you pass a plain object, it will be merged with the default values
       // (New in version 4)
       templateParameters: {
-        'foo': 'bar'
+        'foo': 'bar',
+          'foo2': 'bar2',
       },
       // Or if you want full control, pass a function
       // templateParameters: (compilation, assets, assetTags, options) => {
