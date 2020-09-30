@@ -10,7 +10,9 @@ let htmlWebpackPlugins = []
 // list of file whitin 'static' folder
 let filenames = []
 fs.readdirSync(path.resolve(__dirname, SOURCE_ROOT + '/static')).forEach(file => {
-  filenames.push(file)
+    if (file.indexOf('html')!==-1){
+      filenames.push(file)
+    }
 });
 
 for (index in filenames) {
@@ -20,6 +22,17 @@ for (index in filenames) {
         template: path.resolve(__dirname, SOURCE_ROOT + '/static/' + filename)
     }));
 }
+
+htmlWebpackPlugins.push(new HtmlWebpackPlugin({
+    filename: "working.html",
+    template: '!!ejs-webpack-loader!'+path.resolve(__dirname, SOURCE_ROOT + '/static/working.ejs')
+}));
+
+htmlWebpackPlugins.push(new HtmlWebpackPlugin({
+    filename: "broken.html",
+    template: '!!ejs-webpack-loader!'+path.resolve(__dirname, SOURCE_ROOT + '/static/broken.ejs')
+}));
+
 
 module.exports = merge(common, {
     mode: 'development',

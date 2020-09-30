@@ -55,6 +55,18 @@ module.exports = {
                 loader: 'eslint-loader',
             },
             {
+                test: /\.ejs$/,
+                use: [
+                    {
+                      loader: "ejs-webpack-loader",
+                      options: {
+                        data: {title: "New Title", someVar:"hello world"},
+                        htmlmin: false
+                      }
+                    }
+                ]
+            },
+            {
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
