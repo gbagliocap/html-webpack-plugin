@@ -1,0 +1,42 @@
+.homepage {
+    .wrapper {
+        &-1 {
+            .image {
+                .cmp-image {
+                    .cmp-image__image {
+
+                    }
+                }
+            }
+            .text {
+                &-brand {
+                    .cmp-text {
+                        p {
+    
+                        }
+                    }
+                }
+            }
+            .title {
+                .cmp-title {
+                    .cmp-title__text {
+
+                    }
+                }
+            }
+            .subtitle {
+                .cmp-title {
+                    .cmp-title__text {
+
+                    }
+                }
+            }
+            
+            .button {
+                .cmp-button {
+                    .cmp-button__text {}
+                }
+            }
+        }
+    }
+}
